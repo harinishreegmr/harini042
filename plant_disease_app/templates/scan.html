@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Your Plant</title>
+    <style>
+        body {
+            background-image: url("/static/images/bg2.jpg");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* semi-transparent black overlay */
+            padding: 20px;
+        }
+        .form-container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            width: 100%;
+            max-width: 500px;
+        }
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 20px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 15px 0 5px;
+            font-size: 1rem;
+        }
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            background-color: #f0f0f0;
+            font-size: 1rem;
+            color: #333;
+            cursor: pointer;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        p {
+            margin-top: 20px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="form-container">
+        <img src="/static/images/logo.png" alt="Logo" class="logo">
+        <h2>Scan Your Plant</h2>
+        <form action="/scan" method="POST" enctype="multipart/form-data">
+            <label for="file">Choose an image to scan</label>
+            <input type="file" name="file" accept="image/*" required>
+            <button type="submit">Upload & Scan</button>
+        </form>
+        <p>Need help? <a href="#">Get help</a></p>
+        <a href="/" class="back-link">Back to Home</a>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result - Plant Disease Diagnosis</title>
+    <style>
+        body {
+            background: url('/static/images/bg1.jpg') center/cover no-repeat fixed;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            color: #333;
+        }
+        .result-container {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h1>Disease Identified: {{ result['disease_name'] }}</h1>
+        <p><strong>Cause:</strong> {{ result['cause'] }}</p>
+        <p><strong>Effect:</strong> {{ result['effect'] }}</p>
+        <p><strong>Prevention:</strong> {{ result['prevention'] }}</p>
+        <p><strong>Pesticide Recommendation:</strong> {{ result['treatment'] }}</p>
+        <button onclick="window.location.href='/scan'">Scan Another Image</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container my-5">
+    <h1 class="text-center">Welcome, {{ username }}!</h1>
+    <div class="text-center">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                Profile Options
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="{{ url_for('logout') }}">Logout</a></li>
+                <li><a class="dropdown-item" href="#">View History</a></li>
+                <li><a class="dropdown-item" href="#">Get Help</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
